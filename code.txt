@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIBI P</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+    }
+
+    /* === NAME === */
+    h1.main-name {
+      position: absolute;
+      top: 3cm;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      font-size: 100px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+
+    /* === PROFILE PIC === */
+    .profile-pic {
+      position: absolute;
+      bottom: calc(30px + 6cm);
+      left: 3cm;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      background-color: #222;
+    }
+
+    /* === ABOUT SECTION === */
+    .about {
+      position: absolute;
+      top: calc(3cm + 140px);
+      left: calc(3cm + 340px);
+      right: 3cm;
+      font-size: 26px;
+      line-height: 1.6;
+      color: #ccc;
+      text-align: justify;
+    }
+
+    /* === HR LINE === */
+    hr {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+      border: none;
+      border-top: 2px solid #fff;
+      opacity: 0.6;
+    }
+
+    /* === FIRST HR === */
+    .main-line {
+      bottom: calc(30px + 5cm);
+    }
+
+    /* === EDUCATION SECTION === */
+    .education {
+      position: absolute;
+      top: 18cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .education h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .education h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin: 5px 0;
+    }
+
+    .education h3, .education h4 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #aaa;
+      margin: 3px 0;
+    }
+
+    /* === EXPERIENCE SECTION === */
+    .experience {
+      position: absolute;
+      top: 25cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .experience h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .experience h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .experience p {
+      font-size: 24px;
+      color: #ccc;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 0;
+    }
+
+    /* === INTERNSHIPS === */
+    .internship {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .internship.ceezet {
+      top: 33cm;
+    }
+
+    .internship.cosmic {
+      top: 40cm;
+    }
+
+    .internship.fuji {
+      top: 47cm;
+    }
+
+    .internship h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .internship p {
+      font-size: 24px;
+      color: #aaa;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 0;
+    }
+
+    /* === SKILLS SECTION === */
+    .skills {
+      position: absolute;
+      top: 55cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .skills h1 {
+      text-align: center;
+      font-size: 50px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .skill-box {
+      background-color: #0f0f0f;
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-box h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .item {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .item:hover {
+      background-color: #27273a;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- NAME -->
+  <h1 class="main-name">SIBI P</h1>
+
+  <!-- PHOTO -->
+  <img src="sibi photo.jpg" alt="SIBI P Photo" class="profile-pic">
+
+  <!-- ABOUT SECTION -->
+  <div class="about">
+    <p>
+      I am both a software and hardware enthusiast. I am currently pursuing my B.E. in Electronics and Communication Engineering at Karpagam College of Engineering, Coimbatore. I am good at problem-solving, critical thinking, and team management.
+      I can adapt to any environment. I am also a fast learner, and I can complete all kinds of work in a neat and organized manner. Whether it’s building IoT-based door automation systems or full-stack web applications, I enjoy bringing concepts to life through code and learning new technologies quickly.
+    </p>
+  </div>
+
+  <!-- LINE -->
+  <hr class="main-line">
+
+  <!-- EDUCATION SECTION -->
+  <div class="education">
+    <h1>EDUCATION</h1>
+    <h2>Bachelor of Engineering in ECE</h2>
+    <h3>Karpagam College of Engineering, 2022 – 2026</h3>
+    <h4>CGPA: 7.3</h4>
+    <hr style="margin-top: 1cm;">
+  </div>
+
+  <!-- EXPERIENCE SECTION -->
+  <div class="experience">
+    <h1>EXPERIENCE</h1>
+    <h2>INTERNSHIP | FULL STACK</h2>
+    <p>
+      Proficient in designing user interfaces with HTML, CSS, and JavaScript. Experienced in back-end
+      development using Node.js, Python, Java, and PHP. Skilled in team collaboration and hands-on project
+      implementation to enhance front-end and back-end expertise.
+    </p>
+  </div>
+
+  <!-- INTERNSHIPS -->
+  <div class="internship ceezet">
+    <h2>INTERNSHIP | CEEZET Electronics Pvt Ltd</h2>
+    <p>
+      Gained in-depth knowledge of the electronics industry through hands-on experience in product design,
+      manufacturing processes, and quality control. Collaborated with engineers and technicians, gaining insights
+      into advanced technologies and industry best practices. Applied theoretical knowledge to cutting-edge
+      electronic systems. Developed professional skills, including teamwork, problem-solving, and communication.
+    </p>
+  </div>
+
+  <div class="internship cosmic">
+    <h2>INTERNSHIP | COSMIC Electronics</h2>
+    <p>
+      Gained practical knowledge of electronic devices and systems. Enhanced professional skills, including
+      teamwork and effective communication. Collaborated with professionals to understand industry best
+      practices and real-world applications of electronic engineering.
+    </p>
+  </div>
+
+  <div class="internship fuji">
+    <h2>INTERNSHIP | FUJI ELECTRIC INDIA PVT LTD</h2>
+    <p>
+      Completed a 20-day internship as a Store Worker at Fuji Electric India (5th Aug 2025 – 25th Aug 2025).
+      Gained hands-on experience in inventory management, product handling, and store operations.
+      Enhanced skills in coordination, time management, and workplace discipline.
+    </p>
+  </div>
+  
+
+  <!-- SKILLS SECTION -->
+  <div class="skills">
+    <h1>SKILLS</h1>
+    <div class="skills-container">
+      <!-- Languages -->
+      <div class="skill-box">
+        <h2>Programming Languages</h2>
+        <div class="skill-items">
+          <div class="item">C</div>
+          <div class="item">Java</div>
+          <div class="item">HTML</div>
+          <div class="item">Python</div>
+          <div class="item">MySQL</div>
+          <div class="item">Css</div>
+        </div>
+      </div>
+
+      <!-- Libraries / Frameworks -->
+      <div class="skill-box">
+        <h2>Libraries / Frameworks</h2>
+        <div class="skill-items">
+          <div class="item">JavaScript</div>
+          <div class="item">PCB Design</div>
+          <div class="item">Eclipse</div>
+          <div class="item">VS Code</div>
+          <div class="item">MySQL</div>
+        </div>
+      </div>
+
+      <!-- Tools / Platforms -->
+      <div class="skill-box">
+        <h2>Tools / Platforms</h2>
+        <div class="skill-items">
+          <div class="item">Eclipse</div>
+          <div class="item">Arduino</div>
+          <div class="item">Keil</div>
+          <div class="item">LPC2148</div>
+          <div class="item">Altium</div>
+          <div class="item">Sci Lab</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+2)<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIBI P</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+    }
+
+    /* === NAME === */
+    h1.main-name {
+      position: absolute;
+      top: 3cm;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      font-size: 100px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+
+    /* === PROFILE PIC === */
+    .profile-pic {
+      position: absolute;
+      bottom: calc(30px + 6cm);
+      left: 3cm;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      background-color: #222;
+    }
+
+    /* === ABOUT SECTION === */
+    .about {
+      position: absolute;
+      top: calc(3cm + 140px);
+      left: calc(3cm + 340px);
+      right: 3cm;
+      font-size: 26px;
+      line-height: 1.6;
+      color: #ccc;
+      text-align: justify;
+    }
+
+    /* === HR LINE === */
+    hr {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+      border: none;
+      border-top: 2px solid #fff;
+      opacity: 0.6;
+    }
+
+    /* === FIRST HR === */
+    .main-line {
+      bottom: calc(30px + 5cm);
+    }
+
+    /* === EDUCATION SECTION === */
+    .education {
+      position: absolute;
+      top: 18cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .education h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .education h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin: 5px 0;
+    }
+
+    .education h3, .education h4 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #aaa;
+      margin: 3px 0;
+    }
+
+    /* === EXPERIENCE SECTION === */
+    .experience {
+      position: absolute;
+      top: 25cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .experience h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .experience h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .experience p {
+      font-size: 24px;
+      color: #ccc;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 0;
+    }
+
+    /* === INTERNSHIPS === */
+    .internship {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .internship.ceezet {
+      top: 33cm;
+    }
+
+    .internship.cosmic {
+      top: 40cm;
+    }
+
+    .internship.fuji {
+      top: 47cm;
+    }
+
+    .internship h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .internship p {
+      font-size: 24px;
+      color: #aaa;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 0;
+    }
+
+    /* === SKILLS SECTION === */
+    .skills {
+      position: absolute;
+      top: 55cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .skills h1 {
+      text-align: center;
+      font-size: 50px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .skill-box {
+      background-color: #0f0f0f;
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-box h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .item {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .item:hover {
+      background-color: #27273a;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAME -->
+  <h1 class="main-name">SIBI P</h1>
+
+  <!-- PHOTO -->
+  <img src="sibi photo.jpg" alt="SIBI P Photo" class="profile-pic">
+
+  <!-- ABOUT SECTION -->
+  <div class="about">
+    <p>
+      I am both a software and hardware enthusiast. I am currently pursuing my B.E. in Electronics and Communication Engineering at Karpagam College of Engineering, Coimbatore. I am skilled in problem-solving, critical thinking, and team management.
+      I can adapt to any environment. I am also a fast learner and can complete all kinds of work in a neat and organized manner. Whether it's building IoT-based door automation systems or full-stack web applications, I enjoy bringing ideas to life through code and learning new technologies quickly.
+    </p>
+  </div>
+
+  <!-- LINE -->
+  <hr class="main-line">
+
+  <!-- EDUCATION SECTION -->
+  <div class="education">
+    <h1>EDUCATION</h1>
+    <h2>Bachelor of Engineering in ECE</h2>
+    <h3>Karpagam College of Engineering, 2022 – 2026</h3>
+    <h4>CGPA: 7.3</h4>
+    <hr style="margin-top: 1cm;">
+  </div>
+
+  <!-- EXPERIENCE SECTION -->
+  <div class="experience">
+    <h1>EXPERIENCE</h1>
+    <h2>INTERNSHIP | FULL STACK</h2>
+    <p>
+      Skilled in designing user interfaces using HTML, CSS, and JavaScript. Experienced in back-end development with Node.js, Python, Java, and PHP. Strong in teamwork, collaboration, and hands-on project implementation to enhance both front-end and back-end development expertise.
+    </p>
+  </div>
+
+  <!-- INTERNSHIPS -->
+  <div class="internship ceezet">
+    <h2>INTERNSHIP | CEEZET Electronics Pvt Ltd</h2>
+    <p>
+      Gained comprehensive knowledge of the electronics industry through hands-on experience in product design, manufacturing processes, and quality control. Worked closely with engineers and technicians, learning about advanced technologies and industry best practices. Improved professional skills including teamwork, problem-solving, and effective communication.
+    </p>
+  </div>
+
+  <div class="internship cosmic">
+    <h2>INTERNSHIP | COSMIC Electronics</h2>
+    <p>
+      Learned practical concepts related to electronic devices and systems. Improved teamwork, communication, and technical understanding. Gained exposure to real-world applications of electronic engineering and industry standards.
+    </p>
+  </div>
+
+  <div class="internship fuji">
+    <h2>INTERNSHIP | FUJI ELECTRIC INDIA PVT LTD</h2>
+    <p>
+      Completed a 20-day internship as a Store Worker at Fuji Electric India (5th Aug 2025 – 25th Aug 2025). Gained hands-on experience in inventory management, product handling, and store operations. Improved coordination, time management, and workplace discipline.
+    </p>
+  </div>
+
+  <!-- SKILLS SECTION -->
+  <div class="skills">
+    <h1>SKILLS</h1>
+    <div class="skills-container">
+
+      <!-- Languages -->
+      <div class="skill-box">
+        <h2>Programming Languages</h2>
+        <div class="skill-items">
+          <div class="item">C</div>
+          <div class="item">Java</div>
+          <div class="item">HTML</div>
+          <div class="item">Python</div>
+          <div class="item">MySQL</div>
+          <div class="item">CSS</div>
+        </div>
+      </div>
+
+      <!-- Libraries / Frameworks -->
+      <div class="skill-box">
+        <h2>Libraries / Frameworks</h2>
+        <div class="skill-items">
+          <div class="item">JavaScript</div>
+          <div class="item">PCB Design</div>
+          <div class="item">Eclipse</div>
+          <div class="item">VS Code</div>
+          <div class="item">MySQL</div>
+        </div>
+      </div>
+
+      <!-- Tools / Platforms -->
+      <div class="skill-box">
+        <h2>Tools / Platforms</h2>
+        <div class="skill-items">
+          <div class="item">Eclipse</div>
+          <div class="item">Arduino</div>
+          <div class="item">Keil</div>
+          <div class="item">LPC2148</div>
+          <div class="item">Altium</div>
+          <div class="item">SciLab</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+3)<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIBI P</title>
+
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+    }
+
+    /* === NAME === */
+    h1.main-name {
+      position: absolute;
+      top: 3cm;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      font-size: 100px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+
+    /* === PROFILE PIC === */
+    .profile-pic {
+      position: absolute;
+      bottom: calc(30px + 6cm);
+      left: 3cm;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      background-color: #222;
+    }
+
+    /* === ABOUT SECTION === */
+    .about {
+      position: absolute;
+      top: calc(3cm + 140px);
+      left: calc(3cm + 340px);
+      right: 3cm;
+      font-size: 26px;
+      line-height: 1.6;
+      color: #ccc;
+      text-align: justify;
+    }
+
+    /* === HR LINE === */
+    hr {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+      border: none;
+      border-top: 2px solid #fff;
+      opacity: 0.6;
+    }
+
+    /* === FIRST HR === */
+    .main-line {
+      bottom: calc(30px + 5cm);
+    }
+
+    /* === BOUNCE HOVER ANIMATION FOR SECTION TITLES === */
+    @keyframes bounceTitle {
+      0%   { transform: translateY(0); }
+      30%  { transform: translateY(-20px); }
+      55%  { transform: translateY(8px); }
+      75%  { transform: translateY(-4px); }
+      100% { transform: translateY(0); }
+    }
+
+    .education h1,
+    .experience h1,
+    .skills h1 {
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .education h1:hover,
+    .experience h1:hover,
+    .skills h1:hover {
+      animation: bounceTitle 0.7s ease;
+      color: #00eaff;
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    }
+
+    /* === EDUCATION SECTION === */
+    .education {
+      position: absolute;
+      top: 18cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .education h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .education h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin: 5px 0;
+    }
+
+    .education h3, .education h4 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #aaa;
+      margin: 3px 0;
+    }
+
+    /* === EXPERIENCE SECTION === */
+    .experience {
+      position: absolute;
+      top: 25cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .experience h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .experience h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .experience p {
+      font-size: 24px;
+      color: #ccc;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 0;
+    }
+
+    /* === INTERNSHIPS === */
+    .internship {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .internship.ceezet { top: 33cm; }
+    .internship.cosmic { top: 40cm; }
+    .internship.fuji { top: 47cm; }
+
+    .internship h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .internship p {
+      font-size: 24px;
+      color: #aaa;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 0;
+    }
+
+    /* === SKILLS SECTION === */
+    .skills {
+      position: absolute;
+      top: 55cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .skills h1 {
+      text-align: center;
+      font-size: 50px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .skill-box {
+      background-color: #0f0f0f;
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-box h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .item {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .item:hover {
+      background-color: #27273a;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAME -->
+  <h1 class="main-name">SIBI P</h1>
+
+  <!-- PHOTO -->
+  <img src="sibi photo.jpg" alt="SIBI P Photo" class="profile-pic">
+
+  <!-- ABOUT -->
+  <div class="about">
+    <p>
+      I am both a software and hardware enthusiast. I am currently pursuing my B.E. in Electronics and Communication Engineering at Karpagam College of Engineering, Coimbatore. I am skilled in problem-solving, critical thinking, and team management.
+      I can adapt to any environment. I am also a fast learner and can complete all kinds of work in a neat and organized manner. Whether it's building IoT-based door automation systems or full-stack web applications, I enjoy bringing ideas to life through code and learning new technologies quickly.
+    </p>
+  </div>
+
+  <!-- LINE -->
+  <hr class="main-line">
+
+  <!-- EDUCATION -->
+  <div class="education">
+    <h1>EDUCATION</h1>
+    <h2>Bachelor of Engineering in ECE</h2>
+    <h3>Karpagam College of Engineering, 2022 – 2026</h3>
+    <h4>CGPA: 7.3</h4>
+    <hr style="margin-top: 1cm;">
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="experience">
+    <h1>EXPERIENCE</h1>
+    <h2>INTERNSHIP | FULL STACK</h2>
+    <p>
+      Skilled in designing user interfaces using HTML, CSS, and JavaScript. Experienced in back-end development with Node.js, Python, Java, and PHP. Strong in teamwork, collaboration, and hands-on project implementation to enhance both front-end and back-end development expertise.
+    </p>
+  </div>
+
+  <!-- INTERNSHIPS -->
+  <div class="internship ceezet">
+    <h2>INTERNSHIP | CEEZET Electronics Pvt Ltd</h2>
+    <p>
+      Gained comprehensive knowledge of the electronics industry through hands-on experience in product design, manufacturing processes, and quality control. Worked closely with engineers and technicians, learning about advanced technologies and industry best practices. Improved professional skills including teamwork, problem-solving, and effective communication.
+    </p>
+  </div>
+
+  <div class="internship cosmic">
+    <h2>INTERNSHIP | COSMIC Electronics</h2>
+    <p>
+      Learned practical concepts related to electronic devices and systems. Improved teamwork, communication, and technical understanding. Gained exposure to real-world applications of electronic engineering and industry standards.
+    </p>
+  </div>
+
+  <div class="internship fuji">
+    <h2>INTERNSHIP | FUJI ELECTRIC INDIA PVT LTD</h2>
+    <p>
+      Completed a 20-day internship as a Store Worker at Fuji Electric India (5th Aug 2025 – 25th Aug 2025). Gained hands-on experience in inventory management, product handling, and store operations. Improved coordination, time management, and workplace discipline.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills">
+    <h1>SKILLS</h1>
+
+    <div class="skills-container">
+
+      <div class="skill-box">
+        <h2>Programming Languages</h2>
+        <div class="skill-items">
+          <div class="item">C</div>
+          <div class="item">Java</div>
+          <div class="item">HTML</div>
+          <div class="item">Python</div>
+          <div class="item">MySQL</div>
+          <div class="item">CSS</div>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h2>Libraries / Frameworks</h2>
+        <div class="skill-items">
+          <div class="item">JavaScript</div>
+          <div class="item">PCB Design</div>
+          <div class="item">Eclipse</div>
+          <div class="item">VS Code</div>
+          <div class="item">MySQL</div>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h2>Tools / Platforms</h2>
+        <div class="skill-items">
+          <div class="item">Eclipse</div>
+          <div class="item">Arduino</div>
+          <div class="item">Keil</div>
+          <div class="item">LPC2148</div>
+          <div class="item">Altium</div>
+          <div class="item">SciLab</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

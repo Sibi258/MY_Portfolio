@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIBI P</title>
+
+   <link rel="icon" type="logo.jpg" href="logo.jpg">
+
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+    }
+
+    /* === NAME === */
+    h1.main-name {
+      position: absolute;
+      top: 3cm;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      font-size: 100px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+
+    /* === PROFILE PIC === */
+    .profile-pic {
+      position: absolute;
+      bottom: calc(30px + 6cm);
+      left: 3cm;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      background-color: #222;
+    }
+
+    /* === ABOUT SECTION === */
+    .about {
+      position: absolute;
+      top: calc(3cm + 140px);
+      left: calc(3cm + 340px);
+      right: 3cm;
+      font-size: 26px;
+      line-height: 1.6;
+      color: #ccc;
+      text-align: justify;
+    }
+
+    /* === HR LINE === */
+    hr {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+      border: none;
+      border-top: 2px solid #fff;
+      opacity: 0.6;
+    }
+
+    .main-line {
+      bottom: calc(30px + 5cm);
+    }
+
+    /* === BOUNCE HOVER TITLES === */
+    @keyframes bounceTitle {
+      0%   { transform: translateY(0); }
+      30%  { transform: translateY(-20px); }
+      55%  { transform: translateY(8px); }
+      75%  { transform: translateY(-4px); }
+      100% { transform: translateY(0); }
+    }
+
+    .education h1,
+    .experience h1,
+    .skills h1,
+    .projects h2 {
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .education h1:hover,
+    .experience h1:hover,
+    .skills h1:hover,
+    .projects h2:hover {
+      animation: bounceTitle 0.7s ease;
+      color: #00eaff;
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    }
+
+    /* === EDUCATION SECTION === */
+    .education {
+      position: absolute;
+      top: 18cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .education h1 { text-align: center; font-size: 50px; }
+    .education h2 { font-size: 30px; color: #ccc; margin: 5px 0; }
+    .education h3, .education h4 { font-size: 24px; color: #aaa; margin: 3px 0; }
+
+    /* === EXPERIENCE === */
+    .experience {
+      position: absolute;
+      top: 25cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .experience h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .experience h2 { font-size: 30px; color: #ccc; }
+    .experience p { font-size: 24px; color: #ccc; line-height: 1.6; }
+
+    /* === INTERNSHIPS === */
+    .internship {
+      position: absolute;
+      left: 3cm;
+      right: 3cm;
+    }
+
+    .internship.ceezet { top: 33cm; }
+    .internship.cosmic { top: 40cm; }
+    .internship.fuji  { top: 47cm; }
+
+    .internship h2 { font-size: 30px; color: #ccc; }
+    .internship p { font-size: 24px; color: #aaa; text-align: justify; }
+
+    /* === SKILLS === */
+    .skills {
+      position: absolute;
+      top: 55cm;
+      left: 3cm;
+      right: 3cm;
+      color: #fff;
+    }
+
+    .skills h1 {
+      text-align: center;
+      font-size: 50px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .skill-box {
+      background-color: #0f0f0f;
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-box h2 { font-size: 28px; margin-bottom: 20px; }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .item {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .item:hover {
+      background-color: #27273a;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    /* === PROJECT SECTION === */
+    .projects {
+      position: absolute;
+      top: 70cm;
+      left: 3cm;
+      right: 3cm;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 45px;
+      text-transform: uppercase;
+    }
+
+    .projects h3 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #00eaff;
+    }
+
+    .projects p {
+      font-size: 24px;
+      color: #ccc;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* === PROJECT 2 & 3 === */
+    .project2 {
+      position: absolute;
+      top: 80cm;
+      left: 3cm;
+      right: 3cm;
+    }
+
+    .project3 {
+      position: absolute;
+      top: 86cm;
+      left: 3cm;
+      right: 3cm;
+    }
+
+    .project2 h3,
+    .project3 h3 {
+      font-size: 32px;
+      color: #00eaff;
+    }
+
+    .project2 p,
+    .project3 p {
+      font-size: 24px;
+      color: #ccc;
+      text-align: justify;
+    }
+
+    /* ============= RESUME PREVIEW CARD ============== */
+    .resume-card {
+      position: absolute;
+      top: 95cm;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      padding: 60px;
+      background: #0d0d0d;
+      border-radius: 30px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(0, 255, 200, 0.2);
+    }
+
+    .resume-card h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .resume-card span { color: #00eaff; }
+
+    .resume-card p {
+      font-size: 26px;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .resume-btn {
+      background: #00ffaa;
+      padding: 20px 40px;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
+      transition: 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0, 255, 200, 0.7);
+    }
+
+    /* ============= FOOTER CONTACT ============== */
+    .contact {
+      position: absolute;
+      top: 110cm;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 26px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .contact a {
+      color: #00eaff;
+      font-size: 26px;
+      margin: 10px;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #00ffaa;
+      text-shadow: 0 0 10px #00ffaa;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1 class="main-name">SIBI P</h1>
+
+  <img src="sibi photo.jpg" alt="SIBI P Photo" class="profile-pic">
+
+  <div class="about">
+    <p>
+      I am both a software and hardware enthusiast. I am currently pursuing my B.E. in Electronics and Communication Engineering at Karpagam College of Engineering, Coimbatore. I am skilled in problem-solving, critical thinking, and team management.
+      I can adapt to any environment. I am also a fast learner and can complete all kinds of work in a neat and organized manner.
+    </p>
+  </div>
+
+  <hr class="main-line">
+
+  <!-- EDUCATION -->
+  <div class="education">
+    <h1>EDUCATION</h1>
+    <h2>Bachelor of Engineering in ECE</h2>
+    <h3>Karpagam College of Engineering, 2022 – 2026</h3>
+    <h4>CGPA: 7.3</h4>
+    <hr style="margin-top: 1cm;">
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="experience">
+    <h1>EXPERIENCE</h1>
+    <h2>INTERNSHIP | FULL STACK</h2>
+    <p>
+      Skilled in designing user interfaces using HTML, CSS, and JavaScript. Experienced in back-end development with Node.js, Python, Java, and PHP. Strong in teamwork, collaboration, and hands-on project implementation to enhance both front-end and back-end development expertise.
+    </p>
+  </div>
+
+  <!-- INTERNSHIPS -->
+  <div class="internship ceezet">
+    <h2>INTERNSHIP | CEEZET Electronics Pvt Ltd</h2>
+    <p>
+      Gained comprehensive knowledge of the electronics industry through hands-on experience in product design, manufacturing processes, and quality control. Worked closely with engineers and technicians, learning about advanced technologies and industry best practices. Improved professional skills including teamwork, problem-solving, and effective communication.
+    </p>
+  </div>
+
+  <div class="internship cosmic">
+    <h2>INTERNSHIP | COSMIC Electronics</h2>
+    <p>
+      Learned practical concepts related to electronic devices and systems. Improved teamwork, communication, and technical understanding. Gained exposure to real-world applications of electronic engineering and industry standards.
+    </p>
+  </div>
+
+  <div class="internship fuji">
+    <h2>INTERNSHIP | FUJI ELECTRIC INDIA PVT LTD</h2>
+    <p>
+      Completed a 20-day internship as a Store Worker at Fuji Electric India (5th Aug 2025 – 25th Aug 2025). Gained hands-on experience in inventory management, product handling, and store operations. Improved coordination, time management, and workplace discipline.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills">
+    <h1>SKILLS</h1>
+
+    <div class="skills-container">
+
+      <div class="skill-box">
+        <h2>Programming Languages</h2>
+        <div class="skill-items">
+          <div class="item">C</div>
+          <div class="item">Java</div>
+          <div class="item">HTML</div>
+          <div class="item">Python</div>
+          <div class="item">MySQL</div>
+          <div class="item">CSS</div>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h2>Libraries / Frameworks</h2>
+        <div class="skill-items">
+          <div class="item">JavaScript</div>
+          <div class="item">PCB Design</div>
+          <div class="item">Eclipse</div>
+          <div class="item">VS Code</div>
+          <div class="item">MySQL</div>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h2>Tools / Platforms</h2>
+        <div class="skill-items">
+          <div class="item">Eclipse</div>
+          <div class="item">Arduino</div>
+          <div class="item">Keil</div>
+          <div class="item">LPC2148</div>
+          <div class="item">Altium</div>
+          <div class="item">SciLab</div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr style="margin-top: 2cm;">
+
+  </div>
+
+  <!-- PROJECT SECTION -->
+  <div class="projects">
+    <h2>PROJECTS</h2>
+
+    <h3>Sun & Shock : Innovative Dual Source Energy Storage System</h3>
+
+    <p>
+      The solar integrated vibration innovative dual source energy storage system is highly useful due to its
+      ability to harness and store renewable energy from multiple sources, its efficient energy management,
+      real-time monitoring capabilities, and versatile applications. It provides a sustainable, reliable, and
+      cost-effective power solution for a wide range of scenarios, from remote power supply to educational
+      demonstrations and environmental monitoring.
+    </p>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project2">
+    <h3>VEHICLE COLLISION PREVENTION SYSTEM FOR HILL STATION</h3>
+    <p>
+      This system integrates advanced technologies, including weight sensors, IR sensors, GPS, GSM modules,
+      and an Arduino board, to enhance safety and minimize risks during vehicle traversal in mountainous
+      regions. The system continuously monitors the vehicle's environment, ensures stability, and provides
+      real-time alerts in case of potential risks or emergencies.
+    </p>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project3">
+    <h3>Smart Health Monitoring Wrist Band</h3>
+    <p>
+      The Smart Health Monitoring Wristband is a wearable device that tracks vital health parameters and
+      alerts users to abnormalities. It features a Heart Pulse Sensor for heart rate monitoring, a DHT22 Sensor
+      for temperature and humidity tracking, and a Gas Sensor for detecting harmful gases. An Arduino Nano
+      processes the data and transmits it wirelessly via Bluetooth to a smartphone or display for real-time
+      monitoring.
+    </p>
+  </div>
+
+  <!-- RESUME PREVIEW -->
+  <div class="resume-card">
+    <h1>My <span>Resume</span></h1>
+    <p>Click the button below to preview and download my resume.</p>
+
+    <a class="resume-btn" href="717822L349- Sibi.P.pdf.pdf (1).pdf" target="_blank" download>
+      📄 Preview & Download
+    </a>
+  </div>
+
+  <!-- CONTACT FOOTER -->
+  <div class="contact">
+    📧 sibiperiyasamy8@gmail.com <br>
+    📞 9566581815 <br><br>
+
+    <a href="https://github.com/Sibi258" target="_blank">💻 GitHub</a>
+    <a href="https://www.linkedin.com/in/sibi-p-0bb105258" target="_blank">🔗 LinkedIn</a>
+  </div>
+
+</body>
+</html>
